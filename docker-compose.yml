@@ -25,6 +25,8 @@ services:
       - 8888
     ports:
       - 80:8888
+    volumes:
+      - ./jupyter-notebooks:/home/jovyan/work
 
   # i2b2transmart database
   db:
