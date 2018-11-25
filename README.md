@@ -1,59 +1,49 @@
-This repository can be used to create fully reproducible analyses 
-on the NHANES datasets as curated and loaded into the i2b2/tranSMART 18.1 
-Quickstart application.
+# Reproducible_FAIR_NHANES
 
-System Requirements:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1345320.svg)](https://doi.org/10.5281/zenodo.1345320)
 
-At least 8GB of ram.
-At least 80GB of free hard drive space.
-docker-machine installed and working
-A high speed internet connection, you will be downloading about 40GB of applications and data.
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master)
 
-To prepare your environment to host the research appliance, run this command:
+## What is the purpose of this repository ?
 
-docker-machine create -d virtualbox --virtualbox-disk-size "80000" --virtualbox-memory "8192" --virtualbox-cpu-count "2" nhanes
-eval $(docker-machine env nhanes)
+This GitHub repository serves as an illustration of our way to create a reproducible and F.A.I.R (findable, accessible, interoperable, reusable) statistical analysis and is associated with an article whose reference will be added soon in this section. Both reproducibility and “fairness” concepts are relevant and complementary. They promote a more open, discoverable and credible science. For this reason, they should ideally be strived for by any researchers.
 
-If you reboot your computer, you may need to restart the docker-machine also like this:
+The analysis presented in the Jupyter notebook (ipynb file) is performed on public National Health and Nutrition Examination Survey (NHANES) data collected between 1999 and 2006. The `NHANES_extracted.csv` dataset on which the analysis is performed on, was extracted from the whole NHANES dataset corresponding to this period. This large dataset is archived and can be found on dryad digital repository at http://dx.doi.org/10.5061/dryad.d5h62. Steps leading to the creation of the extracted dataset are displayed in the notebook.
 
-docker-machine start nhanes
-eval $(docker-machine env nhanes)
+A Docker Compose file is included to specify creation of a reproducible container environment. It includes all the  packages and system tools requried to rerun the statistical analysis described above and contained in the Jupyter notebook.  To launch this environment install Docker and Docker Compose, clone this repo and then run the following command from within the directory
 
-If you are done with your work and want to reclaim all your hard drive space:
+`docker-compose up` 
 
-docker-machine rm nhanes
+_More information on CDC NHANES [here](https://www.cdc.gov/nchs/nhanes/index.htm)._
 
 
-In order to start your research project, you should first fork this repository to your own.
+## Mybinder
 
-This new fork you will create on your GitHub account will serve as documentation
-of your research process.
+`install.R` and `runtime.txt` files are additionnal files enabling the creation of a Mybinder environement in the cloud with a Jupyter using R. You can then execute the code by clicking this button : [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master) and share it via this link https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master 
 
-Once you have forked the repo, clone your fork and run `docker-compose pull` 
-in the forked copy.
+(_The loading of the page might take up to ten minutes._ )
 
-This will take a really long time the first time you run it, just be patient. It
-could realistically take an hour or two for the initial download but 30 minutes
-is typical.
+If you prefer executing the code locally, you can either use the R script or the ipynb file provided in the repo.
 
-If you get messages like "the remote end has hung up unexpectedly" just re-run
-`docker-compose pull` until everything successfully downloads.
+More information about the reproducibility aspects are provided in the article that will be soon associated with this repository.
 
-Once downloaded, run `docker-compose up -d`, this will start the research appliance.
+### Resources on F.A.I.R guidelines
 
-Browse your JupyterNotebook by copy pasting the output of the following command into
-your browser address bar:
+ [The FAIR Guiding Principles for scientific data management and stewardship](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792175/)
 
-$(docker-machine ls | grep nhanes | awk '{ print $5 }' | sed s/tcp/http/ | sed s/2376/80/)
+ [FORCE11](https://www.force11.org/fairprinciples) 
+ 
+ [FAIR-TLC](https://zenodo.org/record/203295#.W3HO8rjZAe0) 
+ 
+ [FAIRMetrics](https://github.com/FAIRMetrics/Metrics) 
+ 
+ [DTLS](https://www.dtls.nl/fair-data/fair-principles-explained) 
 
-You can develop your analysis in this jupyter notebook as you normally would. There
-are just a few extra pieces:
+## License
 
-You have sudo access through the jupyterhub terminal. If you have to run anything
-there you should also add the commands to the update_os2.sh script. This will help
-you publish your eventual images.
+Apache 2 license
 
-If you install anything using the R built in package systems from within
-your notebook, those should be added to the dependencies2.r script also.
+Please cite this repository as:
 
-TODO: Documentation on publishing your images and finalizing the repo for research
+
+Norah ANTHONY. (2018, August 14). Reproducible_FAIR_NHANES (Version v1.2). Zenodo. http://doi.org/10.5281/zenodo.1345320
