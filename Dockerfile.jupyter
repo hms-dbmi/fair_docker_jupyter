@@ -1,8 +1,5 @@
 FROM jupyter/r-notebook:77e10160c7ef
 
-ADD notebook.ipynb /home/jovyan/work/
-ADD NHANES_extracted.csv /home/jovyan/work/
-
 ADD install.R install.R
 RUN Rscript install.R
 RUN rm install.R

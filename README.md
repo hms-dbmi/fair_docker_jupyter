@@ -10,6 +10,10 @@ This GitHub repository serves as an illustration of our way to create a reproduc
 
 The analysis presented in the Jupyter notebook (ipynb file) is performed on public National Health and Nutrition Examination Survey (NHANES) data collected between 1999 and 2006. The `NHANES_extracted.csv` dataset on which the analysis is performed on, was extracted from the whole NHANES dataset corresponding to this period. This large dataset is archived and can be found on dryad digital repository at http://dx.doi.org/10.5061/dryad.d5h62. Steps leading to the creation of the extracted dataset are displayed in the notebook.
 
+A Docker Compose file is included that launches a reproducible container environment that includes all the  packages and system tools requried to rerun the statistical analysis described above and contained in the Jupyter notebook.  To launch this environment install Docker and Docker Compose, clone this repo and then run the following command from within the directory
+
+`docker-compose up` 
+
 _More information on CDC NHANES [here](https://www.cdc.gov/nchs/nhanes/index.htm)._
 
 
