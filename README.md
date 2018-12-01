@@ -1,6 +1,6 @@
-# Reproducible_FAIR_NHANES
+# FAIR Docker with Jupyter Notebook
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1345320.svg)](https://doi.org/10.5281/zenodo.1345320)
+[![DOI](https://zenodo.org/badge/159065170.svg)](https://zenodo.org/badge/latestdoi/159065170)
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master)
 
