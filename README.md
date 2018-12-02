@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/159065170.svg)](https://zenodo.org/badge/latestdoi/159065170)
 
+[![](https://images.microbadger.com/badges/version/dbmi/fair_jupyter_r_nhanes.svg)](https://microbadger.com/images/dbmi/fair_jupyter_r_nhanes "Get your own version badge on microbadger.com")
+
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master)
 
 ## What is the purpose of this repository ?
