@@ -1,4 +1,4 @@
-# FAIR Docker with Jupyter Notebook
+# FAIR Docker with Jupyter Notebook, NHANES data and statistical analysis using R
 
 [![DOI](https://zenodo.org/badge/159065170.svg)](https://zenodo.org/badge/latestdoi/159065170) [![](https://images.microbadger.com/badges/version/dbmi/fair_jupyter_r_nhanes.svg)](https://microbadger.com/images/dbmi/fair_jupyter_r_nhanes "Get your own version badge on microbadger.com")
 
