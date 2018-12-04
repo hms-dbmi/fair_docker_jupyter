@@ -2,6 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/159065170.svg)](https://zenodo.org/badge/latestdoi/159065170) [![](https://images.microbadger.com/badges/version/dbmi/fair_jupyter_r_nhanes.svg)](https://microbadger.com/images/dbmi/fair_jupyter_r_nhanes "Get your own version badge on microbadger.com")
 
+The built Docker image has been archived individually on Zenodo since Docker Hub does not guarantee preservation by allowing tagged images to be overwritten easily.  The DOI for the Docker image is 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1933605.svg)](https://doi.org/10.5281/zenodo.1933605)
+
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hms-dbmi/Reproducible_FAIR_NHANES/master)
 
 ## What is the purpose of this repository ?
